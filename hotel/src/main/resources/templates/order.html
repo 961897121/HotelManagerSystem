@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单管理</title>
+</head>
+<!--<link th:src="@{/css/layui.css}" type="text/css">-->
+<!--<link th:src="@{/css/index.css}" type="text/css">-->
+<!-- 引入样式 -->
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<script>
+    var ctx = '[[@{/}]]'
+</script>
+<body>
+<div id="app">
+    <el-table border :data="tableDate.list" style="width: 100%">
+        <el-table-column type="index" label="序号" align="center"></el-table-column>
+        <el-table-column prop="userId" label="用户Id" align="center"></el-table-column>
+        <el-table-column prop="createTime" label="订单创建时间" align="center"></el-table-column>
+        <el-table-column prop="totalPrice" label="总价" align="center"></el-table-column>
+        <el-table-column prop="appraise" label="评价" align="center"></el-table-column>
+        <el-table-column prop="appraiseTime" label="评价时间" align="center"></el-table-column>
+        <el-table-column prop="level" label="评分" align="center">
+            <template slot-scope="scope">
+                <el-rate disabled
+                         v-model="scope.row.level"
+                         :colors="colors">
+                </el-rate>
+            </template>
+        </el-table-column>
+        <el-table-column
+                fixed="right"
+                label="操作"
+                width="100">
+            <template slot-scope="scope">
+                <el-button @click="showDetail(scope.row)" type="text" size="small">查看详情</el-button>
+            </template>
+        </el-table-column>
+    </el-table>
+    <el-pagination
+            @size-change="handleSizeChange"
+            @current-change="handleCurrentChange"
+            :page-sizes="[10, 20, 30, 40]"
+            :page-size="pageSize"
+            layout="total, sizes, prev, pager, next, jumper"
+            :total="tableDate.total">
+    </el-pagination>
+
+    <el-dialog
+            title="查看订单信息"
+            :visible.sync="centerDialogVisible"
+            width="80%"
+            left>
+
+        <el-carousel>
+            <el-carousel-item v-for="item in selRowData.menus" :key="item">
+                <el-scrollbar style="height: 100%;">
+                    <el-form ref="item" v-loading="loading" :label-position="labelPosition" label-width="80px" :model="item">
+                        <el-form-item label="菜单图片">
+                            <el-image
+                                    style="width: 100px; height: 100px"
+                                    :src="item.menuImagePath"
+                                    fit="fill">
+                            </el-image>
+                        </el-form-item>
+                        <el-form-item label="菜单名称">
+                            <el-input v-model="item.menuName" disabled></el-input>
+                        </el-form-item>
+                        <el-form-item label="菜单描述">
+                            <el-input type="text" v-model="item.menuDescribe" disabled></el-input>
+                        </el-form-item>
+                        <el-form-item label="菜单类型">
+                            <el-select v-model="item.typeName" placeholder="请选择" disabled>
+                            </el-select>
+                        </el-form-item>
+                        <el-form-item label="菜单价格">
+                            <el-input type="text" v-model="item.typePrice" disabled></el-input>
+                        </el-form-item>
+                        <el-form-item label="菜单分类">
+                            <el-select v-model="item.sort" placeholder="请选择" disabled>
+                            </el-select>
+                        </el-form-item>
+                    </el-form>
+                </el-scrollbar>
+            </el-carousel-item>
+        </el-carousel>
+
+        <el-carousel>
+            <el-carousel-item v-for="item in selRowData.cookers" :key="item">
+                <el-scrollbar style="height: 100%;">
+                    <el-form ref="item" v-loading="loading" :label-position="labelPosition" label-width="80px" :model="item">
+                        <el-form-item label="厨师图片">
+                            <el-image
+                                    style="width: 100px; height: 100px"
+                                    :src="item.cookImagePath"
+                                    fit="fill">
+                            </el-image>
+                        </el-form-item>
+                        <el-form-item label="厨师名称">
+                            <el-input v-model="item.cookName" disabled></el-input>
+                        </el-form-item>
+                        <el-form-item label="年龄">
+                            <el-input type="text" v-model="item.age" disabled></el-input>
+                        </el-form-item>
+                        <el-form-item label="性别">
+                            <el-select v-model="item.sex" placeholder="请选择" disabled>
+                            </el-select>
+                        </el-form-item>
+                    </el-form>
+                </el-scrollbar>
+            </el-carousel-item>
+        </el-carousel>
+    </el-dialog>
+</div>
+<style>
+
+    .el-carousel__item:nth-child(2n) {
+        /*background-color: #99a9bf;*/
+    }
+
+    .el-carousel__item:nth-child(2n+1) {
+        /*background-color: #d3dce6;*/
+    }
+</style>
+</body>
+<!--<script src="https://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>-->
+<script th:src="@{/js/vue.min.js}"></script>
+<!-- 引入组件库 -->
+<!--<script src="https://unpkg.com/element-ui/lib/index.js"></script>-->
+
+<script th:src="@{/js/index.js}"></script>
+<script th:src="@{/js/jquery.min.js}"></script>
+<script th:src="@{/js/order.js}"></script>
+
+</html>

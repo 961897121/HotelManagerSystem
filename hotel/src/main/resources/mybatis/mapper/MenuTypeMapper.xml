@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.hotel.menu.mapper.MenuTypeMapper">
+    <sql id="menuTypeColumns">
+       id,type_name,type_price
+    </sql>
+
+    <resultMap id="menuTypeMap" type="MenuType">
+        <id column="id" property="id"/>
+        <result column="type_name" property="typeName"/>
+        <result column="type_price" property="typePrice"/>
+    </resultMap>
+
+    <select id="selectTypeOneById" resultMap="menuTypeMap">
+        select
+        <include refid="menuTypeColumns"/>
+        from menu_type
+        where id = #{id}
+    </select>
+
+    <insert id="insertType" parameterType="MenuType" keyProperty="id" useGeneratedKeys="true">
+        insert menu_type(type_name,type_price)
+        values (#{typeName},#{typePrice})
+    </insert>
+
+
+    <update id="updateType" parameterType="MenuType">
+        update menu_type
+        <set>
+            <if test="typeName != null and typeName != ''">
+                and type_name = #{typeName}
+            </if>
+            <if test="typePrice != null and typePrice != ''">
+                and type_price = #{typePrice}
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+
+    <select id="selectTypeList" resultMap="menuTypeMap">
+        select
+        <include refid="menuTypeColumns"/>
+        from menu_type
+        <where>
+            <if test="typeName != null and typeName != ''">
+                and type_name = #{typeName}
+            </if>
+            <if test="typePrice != null and typePrice != ''">
+                and type_price = #{typePrice}
+            </if>
+        </where>
+    </select>
+
+    <delete id="deleteTypeById">
+        delete from menu_type
+        where menu_type.id = #{id}
+    </delete>
+
+</mapper>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>厨师管理</title>
+</head>
+<!--<link th:href="@{/css/layui.css}" rel="stylesheet">-->
+<!--<link th:href="@{/css/index.css}" rel="stylesheet">-->
+<!-- 引入样式 -->
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<script>
+    var ctx = '[[@{/}]]'
+</script>
+<body>
+<div id="app">
+    <el-button type="primary" @click="toAddDialog()">新增厨师</el-button>
+    <el-table border :data="tableDate.list" style="width: 100%">
+        <el-table-column type="index" label="序号" align="center"></el-table-column>
+        <el-table-column prop="cookName" label="厨师名称" align="center"></el-table-column>
+        <el-table-column prop="cookImagePath" label="厨师图片" align="center">
+            <template scope="scope">
+                <el-image
+                        style="width: 100px; height: 100px"
+                        :src="scope.row.cookImagePath"
+                        fit="fill">
+                </el-image>
+            </template>
+        </el-table-column>
+        <el-table-column prop="age" label="年龄" align="center"></el-table-column>
+        <el-table-column prop="sex" label="性别" align="center"></el-table-column>
+        <el-table-column prop="sarlary" label="薪水" align="center"></el-table-column>
+        <el-table-column prop="status" label="状态" align="center"></el-table-column>
+        <el-table-column
+                fixed="right"
+                label="操作"
+                width="100"
+                align="center">
+            <template slot-scope="scope">
+                <el-button @click="editRow(scope.row)" type="text" size="small">查看</el-button>
+            </template>
+        </el-table-column>
+    </el-table>
+    <el-pagination
+            @size-change="handleSizeChange"
+            @current-change="handleCurrentChange"
+            :page-sizes="[10, 20, 30, 40]"
+            :page-size="pageSize"
+            layout="total, sizes, prev, pager, next, jumper"
+            :total="tableDate.total">
+    </el-pagination>
+
+    <el-dialog
+            title="编辑厨师信息"
+            :visible.sync="centerDialogVisible"
+            width="80%"
+            left>
+        <el-form ref="selRowData" v-loading="loading" :model="selRowData">
+            <el-form-item>
+                <el-image
+                        style="width: 100px; height: 100px"
+                        :src="selRowData.cookImagePath"
+                        fit="fill">
+                </el-image>
+                <el-button type="button" @click="showUpLoad">点击更换图片</el-button>
+            </el-form-item>
+            <el-form-item label="厨师名称">
+                <el-input v-model="selRowData.cookName"></el-input>
+            </el-form-item>
+            <el-form-item label="年龄">
+                <el-input type="text" v-model="selRowData.age"></el-input>
+            </el-form-item>
+            <el-form-item label="性别">
+                <el-select v-model="selRowData.sex" placeholder="请选择">
+                    <el-option name="男" value="男"></el-option>
+                    <el-option name="女" value="女"></el-option>
+                </el-select>
+            </el-form-item>
+            <el-form-item label="工资">
+                <el-input type="text" v-model="selRowData.sarlary"></el-input>
+            </el-form-item>
+            <el-form-item label="状态">
+                <el-input type="text" v-model="selRowData.status"></el-input>
+            </el-form-item>
+            <el-popover
+                    placement="top"
+                    width="160"
+                    v-model="visible">
+                <p>这是一行菜单确定删除吗？</p>
+                <div style="text-align: right; margin: 0">
+                    <el-button size="mini" type="text" @click="visible = false">取消</el-button>
+                    <el-button type="primary" size="mini" @click="delRow(selRowData)" >确定</el-button>
+                </div>
+                <el-button type="danger" slot="reference">删除</el-button>
+            </el-popover>
+            <el-button type="primary" @click="changeCooker()">确 定</el-button>
+        </el-form>
+    </el-dialog>
+
+    <el-dialog
+            title="上传图片"
+            :visible.sync="centerDialogVisible2"
+            width="80%"
+            left>
+        <el-upload
+                class="upload-demo"
+                drag
+                ref="upload"
+                action="cooker/upLoad.do"
+                multiple
+                :on-preview="handlePreview"
+                :on-remove="handleRemove"
+                :on-change="handleChange"
+                :auto-upload="false">
+            <i class="el-icon-upload"></i>
+            <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
+            <div class="el-upload__tip" slot="tip">只能上传jpg/png文件，且不超过500kb</div>
+        </el-upload>
+        <el-button style="margin-left: 10px;" size="small" type="button" @click="submitUpload">上传到服务器</el-button>
+    </el-dialog>
+
+    <el-dialog
+            title="新增厨师信息"
+            :visible.sync="centerDialogVisible1"
+            width="80%"
+            left>
+        <el-form ref="selRowData1" v-loading="loading" :model="selRowData1">
+            <el-form-item>
+                <el-upload
+                        class="upload-demo"
+                        drag
+                        ref="upload"
+                        action="cooker/upLoad.do"
+                        multiple
+                        :on-preview="handlePreview"
+                        :on-remove="handleRemove"
+                        :on-change="handleChange"
+                        :auto-upload="false">
+                    <i class="el-icon-upload"></i>
+                    <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
+                    <div class="el-upload__tip" slot="tip">只能上传jpg/png文件，且不超过500kb</div>
+                </el-upload>
+                <el-button style="margin-left: 10px;" size="small" type="button" @click="submitUpload">上传到服务器</el-button>
+            </el-form-item>
+            <el-form-item label="厨师名称">
+                <el-input v-model="selRowData1.cookName"></el-input>
+            </el-form-item>
+            <el-form-item label="年龄">
+                <el-input type="text" v-model="selRowData1.age"></el-input>
+            </el-form-item>
+            <el-form-item label="性别">
+                <el-select v-model="selRowData1.sex" placeholder="请选择">
+                    <el-option name="男" value="男"></el-option>
+                    <el-option name="女" value="女"></el-option>
+                </el-select>
+            </el-form-item>
+            <el-form-item label="工资">
+                <el-input type="text" v-model="selRowData1.sarlary"></el-input>
+            </el-form-item>
+            <el-button type="primary" @click="save()">保存并提交</el-button>
+        </el-form>
+    </el-dialog>
+</div>
+</body>
+<!--<script src="https://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>-->
+<script th:src="@{/js/vue.min.js}"></script>
+<!-- 引入组件库 -->
+<!--<script src="https://unpkg.com/element-ui/lib/index.js"></script>-->
+
+<script th:src="@{/js/index.js}"></script>
+<script th:src="@{/js/jquery.min.js}"></script>
+<script th:src="@{/js/cooker.js}"></script>
+
+</html>

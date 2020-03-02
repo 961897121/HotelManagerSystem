@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.hotel.user.mapper.OmUserMapper">
+    <!-- 返回所有字段的SQL字句 -->
+    <sql id="allColumns">
+        `id`,
+        USER_NAME,
+        LOGIN_NAME,
+        LOGIN_PWD,
+        AGE,
+        SEX,
+        `IDENTITY`,
+        CREATE_TIME,
+        USER_LOCK,
+        TEL,
+        ADDR,
+        QQ,
+        WECHAT
+    </sql>
+
+    <resultMap id="BaseResultMap" type="OmUser">
+        <id column="id" property="id"/>
+        <result column="USER_NAME" property="userName"/>
+        <result column="LOGIN_NAME" property="loginName"/>
+        <result column="LOGIN_PWD" property="loginPwd"/>
+        <result column="AGE" property="age"/>
+        <result column="SEX" property="sex"/>
+        <result column="IDENTITY" property="identity"/>
+        <result column="CREATE_TIME" property="createTime"/>
+        <result column="TEL" property="tel"/>
+        <result column="USER_LOCK" property="userLock"/>
+        <result column="ADDR" property="addr"/>
+        <result column="QQ" property="qq"/>
+        <result column="WECHAT" property="weChat"/>
+    </resultMap>
+
+    <select id="selectOneById" resultMap="BaseResultMap">
+        <if test="id != null and id != ''">
+            select
+            <include refid="allColumns"/>
+            from om_user
+            where `id` = #{id}
+        </if>
+    </select>
+
+    <select id="selectList" resultMap="BaseResultMap">
+        select
+        <include refid="allColumns"/>
+        from om_user
+        <where>
+            <if test="id != null and id != ''">
+                and id = #{id}
+            </if>
+            <if test="userName != null and userName != ''">
+                and USER_NAME = #{userName}
+            </if>
+            <if test="loginName != null and loginName != ''">
+                and LOGIN_NAME = #{loginName}
+            </if>
+            <if test="loginPwd != null and loginPwd != ''">
+                and LOGIN_PWD = #{loginPwd}
+            </if>
+            <if test="age != null and age != ''">
+                and AGE = #{age}
+            </if>
+            <if test="sex != null and sex != ''">
+                and SEX = #{sex}
+            </if>
+            <if test="identity != null and identity != ''">
+                and `IDENTITY` = #{identity}
+            </if>
+            <if test="createTime != null and createTime != ''">
+                and CREATE_TIME = #{createTime}
+            </if>
+            <if test="userLock != null and userLock != ''">
+                and USER_LOCK = #{userLock}
+            </if>
+            <if test="addr != null and addr != ''">
+                and ADDR = #{addr}
+            </if>
+            <if test="qq != null and qq != ''">
+                and QQ = #{qq}
+            </if>
+            <if test="tel != null and tel != ''">
+                and TEL = #{tel}
+            </if>
+            <if test="weChat != null and weChat != ''">
+                and WECHAT = #{weChat}
+            </if>
+        </where>
+
+    </select>
+
+    <update id="updateOne" parameterType="OmUser">
+        update om_user
+        <set>
+            <if test="userName != null and userName != ''">
+                USER_NAME = #{userName},
+            </if>
+            <if test="loginName != null and loginName != ''">
+                LOGIN_NAME = #{loginName},
+            </if>
+            <if test="loginPwd != null and loginPwd != ''">
+                LOGIN_PWD = #{loginPwd},
+            </if>
+            <if test="age != null and age != ''">
+                AGE = #{age},
+            </if>
+            <if test="sex != null and sex != ''">
+                SEX = #{sex},
+            </if>
+            <if test="identity != null and identity != ''">
+                `IDENTITY` = #{identity},
+            </if>
+            <if test="createTime != null and createTime != ''">
+                CREATE_TIME = #{createTime},
+            </if>
+            <if test="userLock != null and userLock != ''">
+                USER_LOCK = #{userLock},
+            </if>
+            <if test="addr != null and addr != ''">
+                ADDR = #{addr},
+            </if>
+            <if test="qq != null and qq != ''">
+                QQ = #{qq},
+            </if>
+            <if test="tel != null and tel != ''">
+                TEL = #{tel},
+            </if>
+            <if test="weChat != null and weChat != ''">
+                WECHAT = #{weChat}
+            </if>
+        </set>
+        where `id` = #{id}
+    </update>
+
+    <insert id="insertOne" parameterType="OmUser" useGeneratedKeys="true" keyProperty="id">
+        insert into om_user(USER_NAME,LOGIN_NAME,LOGIN_PWD,AGE,SEX,`IDENTITY`,CREATE_TIME,USER_LOCK,ADDR,TEL,QQ,WECHAT)
+        values (#{userName},#{loginName},#{loginPwd},#{age},#{sex},#{identity},#{createTime},#{userLock},#{addr},#{tel},#{qq},#{weChat})
+    </insert>
+</mapper>

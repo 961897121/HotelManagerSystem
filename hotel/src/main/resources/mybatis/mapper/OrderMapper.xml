@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.hotel.order.mapper.OrderMapper">
+    <sql id="allColumns">
+        id,`level`,menu_list,total_price,create_time,appraise,appraise_time,cooker_list,user_id
+    </sql>
+
+    <resultMap id="BaseResultMap" type="OrderInfo">
+        <id property="id" column="id"/>
+        <result property="level" column="level"/>
+        <result property="menuList" column="menu_list"/>
+        <result property="totalPrice" column="total_price"/>
+        <result property="createTime" column="create_time"/>
+        <result property="appraise" column="appraise"/>
+        <result property="appraiseTime" column="appraise_time"/>
+        <result property="cookerList" column="cooker_list"/>
+        <result property="userId" column="user_id"/>
+    </resultMap>
+
+    <insert id="insertOne" useGeneratedKeys="true" keyProperty="id">
+        insert into `order`(`level`,menu_list,total_price,create_time,appraise,appraise_time,cooker_list,user_id)
+        values (#{level},#{menuList},#{totalPrice},#{createTime},#{appraise},#{appraiseTime},#{cookerList},#{userId})
+    </insert>
+
+    <update id="updateOne" parameterType="OrderInfo">
+        update `order`
+        <set>
+            <if test="level != '' and level != null">
+                `level` = #{level},
+            </if>
+            <if test="menuList != '' and menuList != null">
+                menu_list = #{menuList},
+            </if>
+            <if test="totalPrice != '' and totalPrice != null">
+                `total_price` = #{totalPrice},
+            </if>
+            <if test="createTime != '' and createTime != null">
+                `create_time` = #{createTime},
+            </if>
+            <if test="appraise != '' and appraise != null">
+                `appraise` = #{appraise},
+            </if>
+            <if test="appraiseTime != '' and appraiseTime != null">
+                `appraise_time` = #{appraiseTime},
+            </if>
+            <if test="cookerList != '' and cookerList != null">
+                `cooker_list` = #{cookerList},
+            </if>
+            <if test="userId != '' and userId != null">
+                `user_id` = #{userId}
+            </if>
+
+        </set>
+        where id = #{id}
+    </update>
+
+    <select id="selectOneById" resultMap="BaseResultMap">
+        select
+        <include refid="allColumns"/>
+        from `order`
+        where id = #{id}
+    </select>
+
+    <delete id="deleteOneById">
+        delete from `order`
+        where id = #{id}
+    </delete>
+
+    <select id="selectList" resultMap="BaseResultMap">
+        select
+        <include refid="allColumns"/>
+        from `order`
+        <where>
+            <if test="level != '' and level != null">
+                and `level` = #{level}
+            </if>
+            <if test="menuList != '' and menuList != null">
+                and menu_list = #{menuList}
+            </if>
+            <if test="totalPrice != '' and totalPrice != null">
+                and `total_price` = #{totalPrice}
+            </if>
+            <if test="createTime != '' and createTime != null">
+                and `create_time` = #{createTime}
+            </if>
+            <if test="appraise != '' and appraise != null">
+                and `appraise` = #{appraise}
+            </if>
+            <if test="appraiseTime != '' and appraiseTime != null">
+                and `appraise_time` = #{appraiseTime}
+            </if>
+            <if test="cookerList != '' and cookerList != null">
+                and `cooker_list` = #{cookerList}
+            </if>
+            <if test="userId != '' and userId != null">
+                and `user_id` = #{userId}
+            </if>
+        </where>
+    </select>
+</mapper>

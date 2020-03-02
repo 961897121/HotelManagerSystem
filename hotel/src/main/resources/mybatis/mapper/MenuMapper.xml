@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.hotel.menu.mapper.MenuMapper">
+    <sql id="allColumns">
+        menu.id,menu_name,menu_describe,status,cook_id,menu_image_path,menu.type_id,sort,type_name,type_price,menu.sort_id
+    </sql>
+
+    <resultMap id="BaseResultMap" type="Menu">
+        <id column="id" property="id"/>
+        <result column="menu_name" property="menuName"/>
+        <result column="menu_describe" property="menuDescribe"/>
+        <result column="status" property="status"/>
+        <result column="cook_id" property="cookId"/>
+        <result column="menu_image_path" property="menuImagePath"/>
+        <result column="type_id" property="typeId"/>
+        <result column="sort" property="sort"/>
+        <result column="type_name" property="typeName"/>
+        <result column="type_price" property="typePrice"/>
+        <result column="sort_id" property="sortId"/>
+    </resultMap>
+
+    <select id="selectOneById" resultMap="BaseResultMap">
+        select
+        <include refid="allColumns"/>
+        from menu,menu_type
+        where menu.type_id = menu_type.id and menu.id = #{id}
+    </select>
+
+    <select id="selectList" resultMap="BaseResultMap">
+        select
+        <include refid="allColumns"/>
+        from menu,menu_type
+        <where>
+            <if test="id != null and id != ''">
+                and menu.id = #{id}
+            </if>
+            <if test="menuName != null and menuName != ''">
+                and menu_name = #{menuName}
+            </if>
+            <if test="status != null and status != ''">
+                and status = #{status}
+            </if>
+            <if test="cookId != null and cookId != ''">
+                and cook_id = #{cookId}
+            </if>
+            <if test="typeId != null and typeId != ''">
+                and type_id = #{typeId}
+            </if>
+            <if test="sort != null and sort != ''">
+                and sort = #{sort}
+            </if>
+            <if test="sortId != null and sortId != ''">
+                and sort_id = #{sortId}
+            </if>
+            and menu_type.id = menu.type_id
+        </where>
+        order by menu.id asc,menu.sort_id asc
+    </select>
+
+    <update id="updateOne" parameterType="Menu">
+        update menu,menu_type
+        <set>
+            <if test="menuName != null and menuName != ''">
+                menu.menu_name = #{menuName},
+            </if>
+            <if test="menuDescribe != null and menuDescribe !=''">
+                menu.menu_describe = #{menuDescribe},
+            </if>
+            <if test="status != null and status != ''">
+                menu.status = #{status},
+            </if>
+            <if test="cookId != '' and cookId != null">
+                menu.cook_id = #{cookId},
+            </if>
+            <if test="menuImagePath != '' and menuImagePath != null">
+                menu.menu_image_path = #{menuImagePath},
+            </if>
+            <if test="sort != '' and sort != null">
+                menu.sort = #{sort},
+            </if>
+            <if test="typeName != null and typeName != ''">
+                menu_type.type_name = #{typeName},
+            </if>
+            <if test="typePrice != null and typePrice !=''">
+                menu_type.type_price = #{typePrice},
+            </if>
+            <if test="sortId != null and sortId !=''">
+                menu.sort_id = #{sortId},
+            </if>
+            <if test="typeId != null and typeId !=''">
+                menu.type_id = #{typeId}
+            </if>
+        </set>
+        where menu.type_id = menu_type.id and menu.id = #{id}
+    </update>
+
+    <insert id="insertOne" parameterType="Menu" useGeneratedKeys="true" keyColumn="id">
+            insert into
+            menu(menu_name,menu_describe,status,cook_id,menu_image_path,menu.type_id,sort,sort_id)
+            values (#{menuName},#{menuDescribe},#{status},#{cookId},#{menuImagePath},#{typeId},#{sort},#{sortId})
+    </insert>
+
+    <delete id="deleteOneById">
+        delete from menu
+        where menu.id = #{id}
+    </delete>
+
+</mapper>

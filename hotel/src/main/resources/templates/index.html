@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>智慧点餐管理系统</title>
+</head>
+
+<!--<link th:href="@{/css/layui.css}" rel="stylesheet">-->
+<!--<link th:href="@{/css/index.css}" rel="stylesheet">-->
+<!-- 引入样式 -->
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<script>
+    var ctx = '[[@{/}]]'
+</script>
+<body>
+<div id="app">
+    <el-container class="head-container">
+        <el-header>
+            <el-menu
+                    style="text-align: center"
+                    :default-active="activeIndex1"
+                    class="el-menu-demo"
+                    mode="horizontal"
+                    @select="handleSelect"
+                    background-color="#545c64"
+                    text-color="#fff"
+                    active-text-color="#ffd04b">
+                <el-menu-item style="font-size: 26px;">智 慧 点 餐 管 理 系 统</el-menu-item>
+                <el-menu-item index="1"><i class="el-icon-s-home"></i>我的工作台</el-menu-item>
+                <el-menu-item index="3" @click="chooseIframePage('订单管理')"><i class="el-icon-s-data" ></i>订单管理</el-menu-item>
+                <el-menu-item index="4">
+                    <div class="block">
+                        <el-avatar style="background-color: white" :size="25"
+                                   th:src="@{/image/user.png}"></el-avatar>
+                    </div>
+                </el-menu-item>
+                <el-menu-item index="5">{{selRowData.userName}}</el-menu-item>
+                <el-menu-item index="6">
+                    <button type="button" class="el-button el-button--success is-round" @click="logout()">退出登录</button>
+                </el-menu-item>
+            </el-menu>
+        </el-header>
+        <el-container>
+            <el-aside>
+                <el-menu
+                        style="text-align: center;"
+                        class="el-menu-vertical-demo"
+                        @open="handleOpen"
+                        @close="handleClose"
+                        background-color="#545c64"
+                        text-color="#fff"
+                        active-text-color="#ffd04b">
+                    <el-menu-item index="1" @click="chooseIframePage('个人信息')">
+                        <span slot="title"><i class="el-icon-edit"></i>个人信息</span>
+                    </el-menu-item>
+                    <el-submenu index="2">
+                        <template slot="title">
+                            <span><i class="el-icon-s-tools"></i>菜单管理</span>
+                        </template>
+                        <el-menu-item-group>
+                            <el-menu-item index="2-1" @click="chooseIframePage('菜单列表')"><i class="el-icon-s-order"></i>菜单列表</el-menu-item>
+                            <el-menu-item index="2-2" @click="chooseIframePage('价格管理')"><i class="el-icon-s-claim"></i>价格管理</el-menu-item>
+                        </el-menu-item-group>
+                    </el-submenu>
+                    <el-menu-item index="3"  @click="chooseIframePage('厨师列表')">
+                        <span slot="title"><i class="el-icon-s-custom"></i>厨师管理</span>
+                    </el-menu-item>
+                </el-menu>
+            </el-aside>
+            <el-main>
+                <iframe id="myFrame" width="100%" height="100%" frameborder="0" scrolling="yes"></iframe>
+            </el-main>
+        </el-container>
+    </el-container>
+
+</div>
+</body>
+
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body{
+        height: 100%;
+        width: 100%;
+    }
+
+    .el-width {
+        width: 250px;
+    }
+
+    .head-container{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+
+    .el-header {
+        background-color: #545c64;
+        color: #333;
+        text-align: center;
+        line-height: 60px;
+        margin-bottom: 1px;
+    }
+
+    .el-aside {
+        background-color: #545c64;
+        color: #333;
+        line-height: 200px;
+    }
+
+    .el-main {
+        color: #333;
+    }
+
+    body > .el-container {
+        margin-bottom: 40px;
+    }
+
+    .el-container:nth-child(5) .el-aside,
+    .el-container:nth-child(6) .el-aside {
+        line-height: 260px;
+    }
+
+    .el-container:nth-child(7) .el-aside {
+        line-height: 320px;
+    }
+</style>
+<!--<script src="https://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>-->
+<script th:src="@{/js/vue.min.js}"></script>
+<!-- 引入组件库 -->
+<!--<script src="https://unpkg.com/element-ui/lib/index.js"></script>-->
+
+<script th:src="@{/js/index.js}"></script>
+<script th:src="@{/js/jquery.min.js}"></script>
+<script th:src="@{/js/home.js}"></script>
+
+
+</html>

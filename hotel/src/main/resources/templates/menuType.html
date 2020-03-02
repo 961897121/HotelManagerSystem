@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>菜单价格管理</title>
+</head>
+<!--<link th:src="@{/css/layui.css}" type="text/css">-->
+<!--<link th:src="@{/css/index.css}" type="text/css">-->
+<!-- 引入样式 -->
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<script>
+    var ctx = '[[@{/}]]'
+</script>
+<body>
+<div id="app">
+    <el-button type="primary" @click="toAddDialog()">新增价格类型</el-button>
+    <el-table :data="tableDate.list" border style="width: 100%">
+        <el-table-column type="index" label="序号" align="center"></el-table-column>
+        <el-table-column prop="typeName" label="类型名称" align="center"></el-table-column>
+        <el-table-column prop="typePrice" label="价格" align="center"></el-table-column>
+        <el-table-column
+                fixed="right"
+                label="操作"
+                width="100"
+                align="center">
+            <template slot-scope="scope">
+                <el-button @click="editRow(scope.row)" type="text" size="small">查看</el-button>
+            </template>
+        </el-table-column>
+    </el-table>
+    <el-pagination
+            @size-change="handleSizeChange"
+            @current-change="handleCurrentChange"
+            :page-sizes="[10, 20, 30, 40]"
+            :page-size="pageSize"
+            layout="total, sizes, prev, pager, next, jumper"
+            :total="tableDate.total">
+    </el-pagination>
+
+    <el-dialog
+            title="编辑菜单价格信息"
+            :visible.sync="centerDialogVisible"
+            width="80%"
+            center>
+        <el-form ref="selRowData" v-loading="loading" :model="selRowData">
+            <el-form-item label="菜单类型名称">
+                <el-input type="text" v-model="selRowData.typeName"></el-input>
+            </el-form-item>
+            <el-form-item label="菜单类型价格">
+                <el-input type="text" v-model="selRowData.typePrice"></el-input>
+            </el-form-item>
+            <el-popover
+                    placement="top"
+                    width="160"
+                    v-model="visible">
+                <p>这是一行菜单确定删除吗？</p>
+                <div style="text-align: right; margin: 0">
+                    <el-button size="mini" type="text" @click="visible = false">取消</el-button>
+                    <el-button type="primary" size="mini" @click="delRow(selRowData)" >确定</el-button>
+                </div>
+                <el-button type="danger" slot="reference">删除</el-button>
+            </el-popover>
+            <el-button type="primary" @click="changeMenu()">确 定</el-button>
+        </el-form>
+    </el-dialog>
+
+    <el-dialog
+            title="新增菜单价格信息"
+            :visible.sync="centerDialogVisible1"
+            width="80%"
+            left>
+        <el-form ref="selRowData1" v-loading="loading" :model="selRowData1">
+            <el-form-item label="菜单类型名称">
+                <el-input type="text" v-model="selRowData1.typeName"></el-input>
+            </el-form-item>
+            <el-form-item label="菜单类型价格">
+                <el-input type="text" v-model="selRowData1.typePrice"></el-input>
+            </el-form-item>
+            <el-button type="primary" @click="save()">确 定</el-button>
+        </el-form>
+    </el-dialog>
+</div>
+</body>
+<!--<script src="https://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>-->
+<script th:src="@{/js/vue.min.js}"></script>
+<!-- 引入组件库 -->
+<!--<script src="https://unpkg.com/element-ui/lib/index.js"></script>-->
+
+<script th:src="@{/js/index.js}"></script>
+<script th:src="@{/js/jquery.min.js}"></script>
+<script th:src="@{/js/menuType.js}"></script>
+
+</html>

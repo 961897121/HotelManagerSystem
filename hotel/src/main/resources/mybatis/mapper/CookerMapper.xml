@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.hotel.cook.mapper.CookerMapper">
+    <sql id="allColumns">
+        id,cook_name,cook_image_path,age,sex,sarlary,status
+    </sql>
+    
+    <resultMap id="BaseResultMap" type="Cooker">
+        <id property="id" column="id"/>
+        <result property="cookName" column="cook_Name"/>
+        <result property="cookImagePath" column="cook_image_path"/>
+        <result property="age" column="age"/>
+        <result property="sex" column="sex"/>
+        <result property="sarlary" column="sarlary"/>
+        <result property="status" column="status"/>
+    </resultMap>
+
+    <select id="selectOneById" resultMap="BaseResultMap">
+        select
+        <include refid="allColumns"/>
+        from cooker
+        where id = #{id}
+    </select>
+
+    <delete id="deleteOneById">
+        delete from cooker where cooker.id = #{id}
+    </delete>
+
+    <select id="selectList" resultMap="BaseResultMap">
+        select
+        <include refid="allColumns"/>
+        from cooker
+        <where>
+            <if test="cookName != null and cookName != ''">
+                and cook_name like concat('%',#{cookName},'%')
+            </if>
+            <if test="cookImagePath != null and cookImagePath != ''">
+                and cook_image_path = #{cookImagePath}
+            </if>
+            <if test="age != null and age != ''">
+                and age = #{age}
+            </if>
+            <if test="sex != null and sex != ''">
+                and sex = #{sex}
+            </if>
+            <if test="sarlary != null and sarlary != ''">
+                and sarlary = #{sarlary}
+            </if>
+            <if test="status != null and status != ''">
+                and status = #{status}
+            </if>
+        </where>
+    </select>
+
+    <update id="updateOne">
+        update cooker
+        <set>
+            <if test="cookName != null and cookName != ''">
+                cook_name = #{cookName},
+            </if>
+            <if test="cookImagePath != null and cookImagePath != ''">
+                cook_image_path = #{cookImagePath},
+            </if>
+            <if test="age != null and age != ''">
+                age = #{age},
+            </if>
+            <if test="sex != null and sex != ''">
+                sex = #{sex},
+            </if>
+            <if test="sarlary != null and sarlary != ''">
+                sarlary = #{sarlary},
+            </if>
+            <if test="status != null and status != ''">
+                status = #{status}
+            </if>
+        </set>
+        where cooker.id = #{id}
+    </update>
+
+    <insert id="insertOne" parameterType="Cooker" useGeneratedKeys="true" keyProperty="id">
+        insert into cooker(cook_name,cook_image_path,age,sex,sarlary,status)
+        values (#{cookName},#{cookImagePath},#{age},#{sex},#{sarlary},#{status})
+    </insert>
+</mapper>
