@@ -1,0 +1,281 @@
+2020-01-28 00:03:40 [ http-nio-8080-exec-10:15781412 ] - [ DEBUG ] ***用户验证登录***
+2020-01-28 00:03:40 [ http-nio-8080-exec-10:15781415 ] - [ DEBUG ] Creating a new SqlSession
+2020-01-28 00:03:40 [ http-nio-8080-exec-10:15781415 ] - [ DEBUG ] SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2727da5a] was not registered for synchronization because synchronization is not active
+2020-01-28 00:03:40 [ http-nio-8080-exec-10:15781416 ] - [ DEBUG ] JDBC Connection [HikariProxyConnection@1148927720 wrapping com.mysql.jdbc.JDBC4Connection@4385d80f] will not be managed by Spring
+2020-01-28 00:03:40 [ http-nio-8080-exec-10:15781417 ] - [ DEBUG ] ==>  Preparing: select `id`, USER_NAME, LOGIN_NAME, LOGIN_PWD, AGE, SEX, `IDENTITY`, CREATE_TIME, USER_LOCK, ID_CARD, ADDR, QQ, WECHAT from om_user WHERE LOGIN_NAME = ? 
+2020-01-28 00:03:40 [ http-nio-8080-exec-10:15781417 ] - [ DEBUG ] ==> Parameters: admin(String)
+2020-01-28 00:03:40 [ http-nio-8080-exec-10:15781419 ] - [ DEBUG ] <==      Total: 1
+2020-01-28 00:03:40 [ http-nio-8080-exec-10:15781419 ] - [ DEBUG ] Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2727da5a]
+2020-01-28 17:52:02 [ restartedMain:0 ] - [ DEBUG ] Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-01-28 19:34:37 [ http-nio-8080-exec-1:6154343 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 19:35:12 [ http-nio-8080-exec-2:6190109 ] - [ DEBUG ] ***跳转到登录页面***
+2020-01-28 19:35:18 [ http-nio-8080-exec-9:6195843 ] - [ DEBUG ] ***用户验证登录***
+2020-01-28 19:35:18 [ http-nio-8080-exec-9:6195872 ] - [ DEBUG ] Creating a new SqlSession
+2020-01-28 19:35:18 [ http-nio-8080-exec-9:6195880 ] - [ DEBUG ] SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6330330d] was not registered for synchronization because synchronization is not active
+2020-01-28 19:35:20 [ http-nio-8080-exec-9:6197958 ] - [ DEBUG ] JDBC Connection [HikariProxyConnection@1959946926 wrapping com.mysql.jdbc.JDBC4Connection@1a3f7a01] will not be managed by Spring
+2020-01-28 19:35:20 [ http-nio-8080-exec-9:6198041 ] - [ DEBUG ] ==>  Preparing: select `id`, USER_NAME, LOGIN_NAME, LOGIN_PWD, AGE, SEX, `IDENTITY`, CREATE_TIME, USER_LOCK, ID_CARD, ADDR, QQ, WECHAT from om_user WHERE LOGIN_NAME = ? 
+2020-01-28 19:35:21 [ http-nio-8080-exec-9:6198212 ] - [ DEBUG ] ==> Parameters: admin(String)
+2020-01-28 19:35:21 [ http-nio-8080-exec-9:6198864 ] - [ DEBUG ] <==      Total: 1
+2020-01-28 19:35:21 [ http-nio-8080-exec-9:6198868 ] - [ DEBUG ] Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6330330d]
+2020-01-28 19:35:21 [ http-nio-8080-exec-8:6198932 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 19:40:34 [ http-nio-8080-exec-4:6511369 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 19:41:12 [ http-nio-8080-exec-9:6549402 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 19:41:47 [ http-nio-8080-exec-8:6584552 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 19:44:35 [ http-nio-8080-exec-4:6752603 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 19:45:43 [ http-nio-8080-exec-1:6820431 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 19:55:01 [ http-nio-8080-exec-4:7378515 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 19:55:03 [ http-nio-8080-exec-5:7380955 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 19:56:01 [ http-nio-8080-exec-8:7438810 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 19:56:13 [ http-nio-8080-exec-10:7450788 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 19:56:34 [ http-nio-8080-exec-4:7471579 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 19:59:45 [ restartedMain:0 ] - [ DEBUG ] Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-01-28 19:59:50 [ http-nio-8080-exec-1:5253 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:00:03 [ http-nio-8080-exec-5:18078 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:00:44 [ http-nio-8080-exec-7:59474 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:00:46 [ http-nio-8080-exec-6:61574 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:00:49 [ http-nio-8080-exec-3:63919 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:00:56 [ http-nio-8080-exec-8:71536 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:01:11 [ http-nio-8080-exec-10:86434 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:01:15 [ http-nio-8080-exec-3:90024 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:01:39 [ http-nio-8080-exec-1:114399 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:02:27 [ http-nio-8080-exec-4:162215 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:02:36 [ http-nio-8080-exec-2:170983 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:02:44 [ http-nio-8080-exec-9:179549 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:02:54 [ http-nio-8080-exec-7:188950 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:03:58 [ http-nio-8080-exec-2:253115 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:04:09 [ http-nio-8080-exec-7:264463 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:04:43 [ http-nio-8080-exec-6:298004 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:07:38 [ http-nio-8080-exec-4:473518 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:10:35 [ http-nio-8080-exec-1:649780 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:10:38 [ http-nio-8080-exec-3:653130 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:10:50 [ http-nio-8080-exec-7:665129 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:10:53 [ http-nio-8080-exec-10:667939 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:15:26 [ http-nio-8080-exec-1:941584 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:17:13 [ http-nio-8080-exec-8:1048013 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:17:54 [ http-nio-8080-exec-6:1089340 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:20:23 [ http-nio-8080-exec-10:1238340 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:20:26 [ http-nio-8080-exec-2:1241186 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:22:39 [ http-nio-8080-exec-9:1373806 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:22:42 [ http-nio-8080-exec-3:1377127 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:23:31 [ http-nio-8080-exec-6:1425700 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:23:34 [ http-nio-8080-exec-10:1428627 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:23:51 [ http-nio-8080-exec-4:1446348 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:24:21 [ http-nio-8080-exec-5:1476141 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:24:44 [ http-nio-8080-exec-3:1498994 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:25:04 [ http-nio-8080-exec-9:1519556 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:25:48 [ http-nio-8080-exec-7:1563153 ] - [ DEBUG ] ***跳转到登录页面***
+2020-01-28 20:25:53 [ http-nio-8080-exec-10:1568104 ] - [ DEBUG ] ***用户验证登录***
+2020-01-28 20:25:53 [ http-nio-8080-exec-10:1568124 ] - [ DEBUG ] Creating a new SqlSession
+2020-01-28 20:25:53 [ http-nio-8080-exec-10:1568133 ] - [ DEBUG ] SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a0be5a7] was not registered for synchronization because synchronization is not active
+2020-01-28 20:25:54 [ http-nio-8080-exec-10:1568616 ] - [ DEBUG ] JDBC Connection [HikariProxyConnection@844607904 wrapping com.mysql.jdbc.JDBC4Connection@7c6808ee] will not be managed by Spring
+2020-01-28 20:25:54 [ http-nio-8080-exec-10:1568621 ] - [ DEBUG ] ==>  Preparing: select `id`, USER_NAME, LOGIN_NAME, LOGIN_PWD, AGE, SEX, `IDENTITY`, CREATE_TIME, USER_LOCK, ID_CARD, ADDR, QQ, WECHAT from om_user WHERE LOGIN_NAME = ? 
+2020-01-28 20:25:54 [ http-nio-8080-exec-10:1568648 ] - [ DEBUG ] ==> Parameters: admin(String)
+2020-01-28 20:25:54 [ http-nio-8080-exec-10:1568697 ] - [ DEBUG ] <==      Total: 1
+2020-01-28 20:25:54 [ http-nio-8080-exec-10:1568702 ] - [ DEBUG ] Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a0be5a7]
+2020-01-28 20:25:54 [ http-nio-8080-exec-2:1568732 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:26:40 [ http-nio-8080-exec-5:1615307 ] - [ DEBUG ] ***跳转到登录页面***
+2020-01-28 20:35:21 [ restartedMain:2136026 ] - [ DEBUG ] Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-01-28 20:35:27 [ restartedMain:2141708 ] - [ DEBUG ] Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-01-28 20:36:48 [ restartedMain:2222786 ] - [ DEBUG ] Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-01-28 20:37:08 [ restartedMain:0 ] - [ DEBUG ] Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-01-28 20:40:05 [ http-nio-8080-exec-1:177767 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:40:44 [ http-nio-8080-exec-2:216821 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:40:56 [ http-nio-8080-exec-10:228270 ] - [ DEBUG ] ***跳转到登录页面***
+2020-01-28 20:41:16 [ restartedMain:247955 ] - [ DEBUG ] Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-01-28 20:42:01 [ restartedMain:293040 ] - [ DEBUG ] Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-01-28 20:42:05 [ restartedMain:297032 ] - [ DEBUG ] Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-01-28 20:45:44 [ http-nio-8080-exec-2:516722 ] - [ DEBUG ] ***用户验证登录***
+2020-01-28 20:45:44 [ http-nio-8080-exec-2:516740 ] - [ DEBUG ] Creating a new SqlSession
+2020-01-28 20:45:44 [ http-nio-8080-exec-2:516746 ] - [ DEBUG ] SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@73a4aa23] was not registered for synchronization because synchronization is not active
+2020-01-28 20:45:45 [ http-nio-8080-exec-2:517186 ] - [ DEBUG ] JDBC Connection [HikariProxyConnection@672809060 wrapping com.mysql.jdbc.JDBC4Connection@24cd1e17] will not be managed by Spring
+2020-01-28 20:45:45 [ http-nio-8080-exec-2:517191 ] - [ DEBUG ] ==>  Preparing: select `id`, USER_NAME, LOGIN_NAME, LOGIN_PWD, AGE, SEX, `IDENTITY`, CREATE_TIME, USER_LOCK, ID_CARD, ADDR, QQ, WECHAT from om_user WHERE LOGIN_NAME = ? 
+2020-01-28 20:45:45 [ http-nio-8080-exec-2:517218 ] - [ DEBUG ] ==> Parameters: admin(String)
+2020-01-28 20:45:45 [ http-nio-8080-exec-2:517271 ] - [ DEBUG ] <==      Total: 1
+2020-01-28 20:45:45 [ http-nio-8080-exec-2:517276 ] - [ DEBUG ] Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@73a4aa23]
+2020-01-28 20:45:45 [ http-nio-8080-exec-3:517319 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 20:54:03 [ http-nio-8080-exec-10:1015512 ] - [ DEBUG ] ***用户验证登录***
+2020-01-28 20:54:03 [ http-nio-8080-exec-10:1015513 ] - [ DEBUG ] Creating a new SqlSession
+2020-01-28 20:54:03 [ http-nio-8080-exec-10:1015515 ] - [ DEBUG ] SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3732bf18] was not registered for synchronization because synchronization is not active
+2020-01-28 20:54:03 [ http-nio-8080-exec-10:1015517 ] - [ DEBUG ] JDBC Connection [HikariProxyConnection@1807051400 wrapping com.mysql.jdbc.JDBC4Connection@24cd1e17] will not be managed by Spring
+2020-01-28 20:54:03 [ http-nio-8080-exec-10:1015518 ] - [ DEBUG ] ==>  Preparing: select `id`, USER_NAME, LOGIN_NAME, LOGIN_PWD, AGE, SEX, `IDENTITY`, CREATE_TIME, USER_LOCK, ID_CARD, ADDR, QQ, WECHAT from om_user WHERE LOGIN_NAME = ? 
+2020-01-28 20:54:03 [ http-nio-8080-exec-10:1015519 ] - [ DEBUG ] ==> Parameters: admin(String)
+2020-01-28 20:54:03 [ http-nio-8080-exec-10:1015522 ] - [ DEBUG ] <==      Total: 1
+2020-01-28 20:54:03 [ http-nio-8080-exec-10:1015522 ] - [ DEBUG ] Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3732bf18]
+2020-01-28 20:54:03 [ http-nio-8080-exec-9:1015715 ] - [ DEBUG ] ***跳转到个人主页面***
+2020-01-28 21:09:24 [ http-nio-8080-exec-8:1936461 ] - [ DEBUG ] ***用户验证登录***
+2020-01-28 21:09:24 [ http-nio-8080-exec-8:1936463 ] - [ DEBUG ] Creating a new SqlSession
+2020-01-28 21:09:24 [ http-nio-8080-exec-8:1936464 ] - [ DEBUG ] SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3947cf4b] was not registered for synchronization because synchronization is not active
+2020-01-28 21:09:24 [ http-nio-8080-exec-8:1936466 ] - [ DEBUG ] JDBC Connection [HikariProxyConnection@931149331 wrapping com.mysql.jdbc.JDBC4Connection@24cd1e17] will not be managed by Spring
+2020-01-28 21:09:24 [ http-nio-8080-exec-8:1936467 ] - [ DEBUG ] ==>  Preparing: select `id`, USER_NAME, LOGIN_NAME, LOGIN_PWD, AGE, SEX, `IDENTITY`, CREATE_TIME, USER_LOCK, ID_CARD, ADDR, QQ, WECHAT from om_user WHERE LOGIN_NAME = ? 
+2020-01-28 21:09:24 [ http-nio-8080-exec-8:1936468 ] - [ DEBUG ] ==> Parameters: admin(String)
+2020-01-28 21:09:24 [ http-nio-8080-exec-8:1936472 ] - [ DEBUG ] <==      Total: 1
+2020-01-28 21:09:24 [ http-nio-8080-exec-8:1936474 ] - [ DEBUG ] Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3947cf4b]
+2020-01-28 21:12:32 [ http-nio-8080-exec-10:2124283 ] - [ DEBUG ] ***用户验证登录***
+2020-01-28 21:12:32 [ http-nio-8080-exec-10:2124283 ] - [ DEBUG ] Creating a new SqlSession
+2020-01-28 21:12:32 [ http-nio-8080-exec-10:2124283 ] - [ DEBUG ] SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3ef1a618] was not registered for synchronization because synchronization is not active
+2020-01-28 21:12:32 [ http-nio-8080-exec-10:2124286 ] - [ DEBUG ] JDBC Connection [HikariProxyConnection@446832727 wrapping com.mysql.jdbc.JDBC4Connection@24cd1e17] will not be managed by Spring
+2020-01-28 21:12:32 [ http-nio-8080-exec-10:2124286 ] - [ DEBUG ] ==>  Preparing: select `id`, USER_NAME, LOGIN_NAME, LOGIN_PWD, AGE, SEX, `IDENTITY`, CREATE_TIME, USER_LOCK, ID_CARD, ADDR, QQ, WECHAT from om_user WHERE LOGIN_NAME = ? 
+2020-01-28 21:12:32 [ http-nio-8080-exec-10:2124287 ] - [ DEBUG ] ==> Parameters: admin(String)
+2020-01-28 21:12:32 [ http-nio-8080-exec-10:2124289 ] - [ DEBUG ] <==      Total: 1
+2020-01-28 21:12:32 [ http-nio-8080-exec-10:2124290 ] - [ DEBUG ] Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3ef1a618]
+2020-01-28 21:13:32 [ http-nio-8080-exec-2:2184221 ] - [ DEBUG ] ***用户验证登录***
+2020-01-28 21:13:32 [ http-nio-8080-exec-2:2184221 ] - [ DEBUG ] Creating a new SqlSession
+2020-01-28 21:13:32 [ http-nio-8080-exec-2:2184222 ] - [ DEBUG ] SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@f4f38bc] was not registered for synchronization because synchronization is not active
+2020-01-28 21:13:32 [ http-nio-8080-exec-2:2184223 ] - [ DEBUG ] JDBC Connection [HikariProxyConnection@1029826595 wrapping com.mysql.jdbc.JDBC4Connection@24cd1e17] will not be managed by Spring
+2020-01-28 21:13:32 [ http-nio-8080-exec-2:2184224 ] - [ DEBUG ] ==>  Preparing: select `id`, USER_NAME, LOGIN_NAME, LOGIN_PWD, AGE, SEX, `IDENTITY`, CREATE_TIME, USER_LOCK, ID_CARD, ADDR, QQ, WECHAT from om_user WHERE LOGIN_NAME = ? 
+2020-01-28 21:13:32 [ http-nio-8080-exec-2:2184224 ] - [ DEBUG ] ==> Parameters: admin(String)
+2020-01-28 21:13:32 [ http-nio-8080-exec-2:2184227 ] - [ DEBUG ] <==      Total: 1
+2020-01-28 21:13:32 [ http-nio-8080-exec-2:2184228 ] - [ DEBUG ] Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@f4f38bc]
+2020-01-28 21:14:25 [ http-nio-8080-exec-4:2237826 ] - [ DEBUG ] ***用户验证登录***
+2020-01-28 21:14:25 [ http-nio-8080-exec-4:2237826 ] - [ DEBUG ] Creating a new SqlSession
+2020-01-28 21:14:25 [ http-nio-8080-exec-4:2237826 ] - [ DEBUG ] SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@27e3116a] was not registered for synchronization because synchronization is not active
+2020-01-28 21:14:25 [ http-nio-8080-exec-4:2237828 ] - [ DEBUG ] JDBC Connection [HikariProxyConnection@1658948594 wrapping com.mysql.jdbc.JDBC4Connection@24cd1e17] will not be managed by Spring
+2020-01-28 21:14:25 [ http-nio-8080-exec-4:2237828 ] - [ DEBUG ] ==>  Preparing: select `id`, USER_NAME, LOGIN_NAME, LOGIN_PWD, AGE, SEX, `IDENTITY`, CREATE_TIME, USER_LOCK, ID_CARD, ADDR, QQ, WECHAT from om_user WHERE LOGIN_NAME = ? 
+2020-01-28 21:14:25 [ http-nio-8080-exec-4:2237829 ] - [ DEBUG ] ==> Parameters: admin(String)
+2020-01-28 21:14:25 [ http-nio-8080-exec-4:2237830 ] - [ DEBUG ] <==      Total: 1
+2020-01-28 21:14:25 [ http-nio-8080-exec-4:2237831 ] - [ DEBUG ] Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@27e3116a]
+2020-01-28 21:18:46 [ http-nio-8080-exec-3:2498171 ] - [ DEBUG ] ***用户验证登录***
+2020-01-28 21:18:46 [ http-nio-8080-exec-3:2498172 ] - [ DEBUG ] Creating a new SqlSession
+2020-01-28 21:18:46 [ http-nio-8080-exec-3:2498172 ] - [ DEBUG ] SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@18101c65] was not registered for synchronization because synchronization is not active
+2020-01-28 21:18:46 [ http-nio-8080-exec-3:2498175 ] - [ DEBUG ] JDBC Connection [HikariProxyConnection@847526644 wrapping com.mysql.jdbc.JDBC4Connection@68ef325d] will not be managed by Spring
+2020-01-28 21:18:46 [ http-nio-8080-exec-3:2498176 ] - [ DEBUG ] ==>  Preparing: select `id`, USER_NAME, LOGIN_NAME, LOGIN_PWD, AGE, SEX, `IDENTITY`, CREATE_TIME, USER_LOCK, ID_CARD, ADDR, QQ, WECHAT from om_user WHERE LOGIN_NAME = ? 
+2020-01-28 21:18:46 [ http-nio-8080-exec-3:2498177 ] - [ DEBUG ] ==> Parameters: admin(String)
+2020-01-28 21:18:46 [ http-nio-8080-exec-3:2498182 ] - [ DEBUG ] <==      Total: 1
+2020-01-28 21:18:46 [ http-nio-8080-exec-3:2498183 ] - [ DEBUG ] Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@18101c65]
+2020-01-28 21:52:34 [ restartedMain:0 ] - [ DEBUG ] Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2020-01-28 22:03:38 [ http-nio-8080-exec-1:663750 ] - [ DEBUG ] ***用户验证登录***
+2020-01-28 22:03:38 [ http-nio-8080-exec-1:663765 ] - [ DEBUG ] Creating a new SqlSession
+2020-01-28 22:03:38 [ http-nio-8080-exec-1:663770 ] - [ DEBUG ] SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@37ea1613] was not registered for synchronization because synchronization is not active
+2020-01-28 22:03:38 [ http-nio-8080-exec-1:664354 ] - [ DEBUG ] JDBC Connection [HikariProxyConnection@1889458732 wrapping com.mysql.jdbc.JDBC4Connection@453d2fb1] will not be managed by Spring
+2020-01-28 22:03:38 [ http-nio-8080-exec-1:664359 ] - [ DEBUG ] ==>  Preparing: select `id`, USER_NAME, LOGIN_NAME, LOGIN_PWD, AGE, SEX, `IDENTITY`, CREATE_TIME, USER_LOCK, ID_CARD, ADDR, QQ, WECHAT from om_user WHERE LOGIN_NAME = ? 
+2020-01-28 22:03:38 [ http-nio-8080-exec-1:664384 ] - [ DEBUG ] ==> Parameters: admin(String)
+2020-01-28 22:03:38 [ http-nio-8080-exec-1:664431 ] - [ DEBUG ] <==      Total: 1
+2020-01-28 22:03:38 [ http-nio-8080-exec-1:664436 ] - [ DEBUG ] Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@37ea1613]
+2020-01-28 22:03:48 [ http-nio-8080-exec-3:674168 ] - [ DEBUG ] ***用户验证登录***
+2020-01-28 22:03:48 [ http-nio-8080-exec-3:674170 ] - [ DEBUG ] Creating a new SqlSession
+2020-01-28 22:03:48 [ http-nio-8080-exec-3:674171 ] - [ DEBUG ] SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@73b787d9] was not registered for synchronization because synchronization is not active
+2020-01-28 22:03:48 [ http-nio-8080-exec-3:674174 ] - [ DEBUG ] JDBC Connection [HikariProxyConnection@2104522719 wrapping com.mysql.jdbc.JDBC4Connection@453d2fb1] will not be managed by Spring
+2020-01-28 22:03:48 [ http-nio-8080-exec-3:674175 ] - [ DEBUG ] ==>  Preparing: select `id`, USER_NAME, LOGIN_NAME, LOGIN_PWD, AGE, SEX, `IDENTITY`, CREATE_TIME, USER_LOCK, ID_CARD, ADDR, QQ, WECHAT from om_user WHERE LOGIN_NAME = ? 
+2020-01-28 22:03:48 [ http-nio-8080-exec-3:674177 ] - [ DEBUG ] ==> Parameters: admin(String)
+2020-01-28 22:03:48 [ http-nio-8080-exec-3:674180 ] - [ DEBUG ] <==      Total: 1
+2020-01-28 22:03:48 [ http-nio-8080-exec-3:674182 ] - [ DEBUG ] Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@73b787d9]
+2020-01-28 22:05:08 [ http-nio-8080-exec-5:754020 ] - [ DEBUG ] ***用户验证登录***
+2020-01-28 22:05:08 [ http-nio-8080-exec-5:754020 ] - [ DEBUG ] Creating a new SqlSession
+2020-01-28 22:05:08 [ http-nio-8080-exec-5:754021 ] - [ DEBUG ] SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@776cfc24] was not registered for synchronization because synchronization is not active
+2020-01-28 22:05:08 [ http-nio-8080-exec-5:754022 ] - [ DEBUG ] JDBC Connection [HikariProxyConnection@2041257145 wrapping com.mysql.jdbc.JDBC4Connection@453d2fb1] will not be managed by Spring
+2020-01-28 22:05:08 [ http-nio-8080-exec-5:754023 ] - [ DEBUG ] ==>  Preparing: select `id`, USER_NAME, LOGIN_NAME, LOGIN_PWD, AGE, SEX, `IDENTITY`, CREATE_TIME, USER_LOCK, ID_CARD, ADDR, QQ, WECHAT from om_user WHERE LOGIN_NAME = ? 
+2020-01-28 22:05:08 [ http-nio-8080-exec-5:754023 ] - [ DEBUG ] ==> Parameters: admin(String)
+2020-01-28 22:05:08 [ http-nio-8080-exec-5:754025 ] - [ DEBUG ] <==      Total: 1
+2020-01-28 22:05:08 [ http-nio-8080-exec-5:754026 ] - [ DEBUG ] Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@776cfc24]
+2020-01-28 22:05:24 [ http-nio-8080-exec-7:769954 ] - [ DEBUG ] ***用户验证登录***
+2020-01-28 22:05:24 [ http-nio-8080-exec-7:769955 ] - [ DEBUG ] Creating a new SqlSession
+2020-01-28 22:05:24 [ http-nio-8080-exec-7:769955 ] - [ DEBUG ] SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4db99b01] was not registered for synchronization because synchronization is not active
+2020-01-28 22:05:24 [ http-nio-8080-exec-7:769957 ] - [ DEBUG ] JDBC Connection [HikariProxyConnection@1132362950 wrapping com.mysql.jdbc.JDBC4Connection@453d2fb1] will not be managed by Spring
+2020-01-28 22:05:24 [ http-nio-8080-exec-7:769957 ] - [ DEBUG ] ==>  Preparing: select `id`, USER_NAME, LOGIN_NAME, LOGIN_PWD, AGE, SEX, `IDENTITY`, CREATE_TIME, USER_LOCK, ID_CARD, ADDR, QQ, WECHAT from om_user WHERE LOGIN_NAME = ? 
+2020-01-28 22:05:24 [ http-nio-8080-exec-7:769958 ] - [ DEBUG ] ==> Parameters: admin(String)
+2020-01-28 22:05:24 [ http-nio-8080-exec-7:769960 ] - [ DEBUG ] <==      Total: 1
+2020-01-28 22:05:24 [ http-nio-8080-exec-7:769961 ] - [ DEBUG ] Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4db99b01]
+2020-01-28 22:08:37 [ http-nio-8080-exec-9:963360 ] - [ DEBUG ] ***用户验证登录***
+2020-01-28 22:08:37 [ http-nio-8080-exec-9:963361 ] - [ DEBUG ] Creating a new SqlSession
+2020-01-28 22:08:37 [ http-nio-8080-exec-9:963361 ] - [ DEBUG ] SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@432cd26b] was not registered for synchronization because synchronization is not active
+2020-01-28 22:08:37 [ http-nio-8080-exec-9:963364 ] - [ DEBUG ] JDBC Connection [HikariProxyConnection@1307260030 wrapping com.mysql.jdbc.JDBC4Connection@453d2fb1] will not be managed by Spring
+2020-01-28 22:08:37 [ http-nio-8080-exec-9:963364 ] - [ DEBUG ] ==>  Preparing: select `id`, USER_NAME, LOGIN_NAME, LOGIN_PWD, AGE, SEX, `IDENTITY`, CREATE_TIME, USER_LOCK, ID_CARD, ADDR, QQ, WECHAT from om_user WHERE LOGIN_NAME = ? 
+2020-01-28 22:08:37 [ http-nio-8080-exec-9:963365 ] - [ DEBUG ] ==> Parameters: admin(String)
+2020-01-28 22:08:37 [ http-nio-8080-exec-9:963367 ] - [ DEBUG ] <==      Total: 1
+2020-01-28 22:08:37 [ http-nio-8080-exec-9:963368 ] - [ DEBUG ] Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@432cd26b]
+2020-01-28 22:10:24 [ http-nio-8080-exec-1:1070166 ] - [ DEBUG ] ***用户验证登录***
+2020-01-28 22:10:24 [ http-nio-8080-exec-1:1070167 ] - [ DEBUG ] Creating a new SqlSession
+2020-01-28 22:10:24 [ http-nio-8080-exec-1:1070168 ] - [ DEBUG ] SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@662e7369] was not registered for synchronization because synchronization is not active
+2020-01-28 22:10:24 [ http-nio-8080-exec-1:1070170 ] - [ DEBUG ] JDBC Connection [HikariProxyConnection@1505471346 wrapping com.mysql.jdbc.JDBC4Connection@453d2fb1] will not be managed by Spring
+2020-01-28 22:10:24 [ http-nio-8080-exec-1:1070170 ] - [ DEBUG ] ==>  Preparing: select `id`, USER_NAME, LOGIN_NAME, LOGIN_PWD, AGE, SEX, `IDENTITY`, CREATE_TIME, USER_LOCK, ID_CARD, ADDR, QQ, WECHAT from om_user WHERE LOGIN_NAME = ? 
+2020-01-28 22:10:24 [ http-nio-8080-exec-1:1070172 ] - [ DEBUG ] ==> Parameters: admin(String)
+2020-01-28 22:10:24 [ http-nio-8080-exec-1:1070175 ] - [ DEBUG ] <==      Total: 1
+2020-01-28 22:10:24 [ http-nio-8080-exec-1:1070176 ] - [ DEBUG ] Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@662e7369]
+2020-01-28 22:12:08 [ http-nio-8080-exec-3:1174116 ] - [ DEBUG ] ***用户验证登录***
+2020-01-28 22:12:08 [ http-nio-8080-exec-3:1174117 ] - [ DEBUG ] Creating a new SqlSession
+2020-01-28 22:12:08 [ http-nio-8080-exec-3:1174117 ] - [ DEBUG ] SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7811034] was not registered for synchronization because synchronization is not active
+2020-01-28 22:12:08 [ http-nio-8080-exec-3:1174118 ] - [ DEBUG ] JDBC Connection [HikariProxyConnection@395227765 wrapping com.mysql.jdbc.JDBC4Connection@453d2fb1] will not be managed by Spring
+2020-01-28 22:12:08 [ http-nio-8080-exec-3:1174119 ] - [ DEBUG ] ==>  Preparing: select `id`, USER_NAME, LOGIN_NAME, LOGIN_PWD, AGE, SEX, `IDENTITY`, CREATE_TIME, USER_LOCK, ID_CARD, ADDR, QQ, WECHAT from om_user WHERE LOGIN_NAME = ? 
+2020-01-28 22:12:08 [ http-nio-8080-exec-3:1174119 ] - [ DEBUG ] ==> Parameters: admin(String)
+2020-01-28 22:12:08 [ http-nio-8080-exec-3:1174121 ] - [ DEBUG ] <==      Total: 1
+2020-01-28 22:12:08 [ http-nio-8080-exec-3:1174122 ] - [ DEBUG ] Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7811034]
+2020-01-28 22:15:32 [ http-nio-8080-exec-5:1378044 ] - [ DEBUG ] ***用户验证登录***
+2020-01-28 22:15:32 [ http-nio-8080-exec-5:1378044 ] - [ DEBUG ] Creating a new SqlSession
+2020-01-28 22:15:32 [ http-nio-8080-exec-5:1378045 ] - [ DEBUG ] SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@9e4cf14] was not registered for synchronization because synchronization is not active
+2020-01-28 22:15:32 [ http-nio-8080-exec-5:1378046 ] - [ DEBUG ] JDBC Connection [HikariProxyConnection@1343473483 wrapping com.mysql.jdbc.JDBC4Connection@453d2fb1] will not be managed by Spring
+2020-01-28 22:15:32 [ http-nio-8080-exec-5:1378047 ] - [ DEBUG ] ==>  Preparing: select `id`, USER_NAME, LOGIN_NAME, LOGIN_PWD, AGE, SEX, `IDENTITY`, CREATE_TIME, USER_LOCK, ID_CARD, ADDR, QQ, WECHAT from om_user WHERE LOGIN_NAME = ? 
+2020-01-28 22:15:32 [ http-nio-8080-exec-5:1378047 ] - [ DEBUG ] ==> Parameters: admin(String)
+2020-01-28 22:15:32 [ http-nio-8080-exec-5:1378051 ] - [ DEBUG ] <==      Total: 1
+2020-01-28 22:15:32 [ http-nio-8080-exec-5:1378052 ] - [ DEBUG ] Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@9e4cf14]
+2020-01-28 22:34:31 [ http-nio-8080-exec-7:2516793 ] - [ DEBUG ] ***用户验证登录***
+2020-01-28 22:34:31 [ http-nio-8080-exec-7:2516794 ] - [ DEBUG ] Creating a new SqlSession
+2020-01-28 22:34:31 [ http-nio-8080-exec-7:2516794 ] - [ DEBUG ] SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@330b50c9] was not registered for synchronization because synchronization is not active
+2020-01-28 22:34:31 [ http-nio-8080-exec-7:2516798 ] - [ DEBUG ] JDBC Connection [HikariProxyConnection@2072116385 wrapping com.mysql.jdbc.JDBC4Connection@626c89b2] will not be managed by Spring
+2020-01-28 22:34:31 [ http-nio-8080-exec-7:2516799 ] - [ DEBUG ] ==>  Preparing: select `id`, USER_NAME, LOGIN_NAME, LOGIN_PWD, AGE, SEX, `IDENTITY`, CREATE_TIME, USER_LOCK, ID_CARD, ADDR, QQ, WECHAT from om_user WHERE LOGIN_NAME = ? 
+2020-01-28 22:34:31 [ http-nio-8080-exec-7:2516802 ] - [ DEBUG ] ==> Parameters: admin(String)
+2020-01-28 22:34:31 [ http-nio-8080-exec-8:2516807 ] - [ DEBUG ] ***用户验证登录***
+2020-01-28 22:34:31 [ http-nio-8080-exec-8:2516807 ] - [ DEBUG ] Creating a new SqlSession
+2020-01-28 22:34:31 [ http-nio-8080-exec-8:2516808 ] - [ DEBUG ] SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1d6137e1] was not registered for synchronization because synchronization is not active
+2020-01-28 22:34:31 [ http-nio-8080-exec-9:2516813 ] - [ DEBUG ] ***用户验证登录***
+2020-01-28 22:34:31 [ http-nio-8080-exec-8:2516814 ] - [ DEBUG ] JDBC Connection [HikariProxyConnection@329701949 wrapping com.mysql.jdbc.JDBC4Connection@17995c91] will not be managed by Spring
+2020-01-28 22:34:31 [ http-nio-8080-exec-9:2516814 ] - [ DEBUG ] Creating a new SqlSession
+2020-01-28 22:34:31 [ http-nio-8080-exec-8:2516814 ] - [ DEBUG ] ==>  Preparing: select `id`, USER_NAME, LOGIN_NAME, LOGIN_PWD, AGE, SEX, `IDENTITY`, CREATE_TIME, USER_LOCK, ID_CARD, ADDR, QQ, WECHAT from om_user WHERE LOGIN_NAME = ? 
+2020-01-28 22:34:31 [ http-nio-8080-exec-9:2516814 ] - [ DEBUG ] SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@cd63e45] was not registered for synchronization because synchronization is not active
+2020-01-28 22:34:31 [ http-nio-8080-exec-8:2516816 ] - [ DEBUG ] ==> Parameters: admin(String)
+2020-01-28 22:34:31 [ http-nio-8080-exec-9:2516818 ] - [ DEBUG ] JDBC Connection [HikariProxyConnection@701237822 wrapping com.mysql.jdbc.JDBC4Connection@3d9093bd] will not be managed by Spring
+2020-01-28 22:34:31 [ http-nio-8080-exec-9:2516818 ] - [ DEBUG ] ==>  Preparing: select `id`, USER_NAME, LOGIN_NAME, LOGIN_PWD, AGE, SEX, `IDENTITY`, CREATE_TIME, USER_LOCK, ID_CARD, ADDR, QQ, WECHAT from om_user WHERE LOGIN_NAME = ? 
+2020-01-28 22:34:31 [ http-nio-8080-exec-9:2516819 ] - [ DEBUG ] ==> Parameters: admin(String)
+2020-01-28 22:34:31 [ http-nio-8080-exec-9:2516849 ] - [ DEBUG ] <==      Total: 1
+2020-01-28 22:34:31 [ http-nio-8080-exec-7:2516849 ] - [ DEBUG ] <==      Total: 1
+2020-01-28 22:34:31 [ http-nio-8080-exec-9:2516850 ] - [ DEBUG ] Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@cd63e45]
+2020-01-28 22:34:31 [ http-nio-8080-exec-7:2516850 ] - [ DEBUG ] Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@330b50c9]
+2020-01-28 22:34:31 [ http-nio-8080-exec-8:2516863 ] - [ DEBUG ] <==      Total: 1
+2020-01-28 22:34:31 [ http-nio-8080-exec-8:2516864 ] - [ DEBUG ] Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1d6137e1]
+2020-01-28 22:34:32 [ http-nio-8080-exec-10:2517858 ] - [ DEBUG ] ***用户验证登录***
+2020-01-28 22:34:32 [ http-nio-8080-exec-10:2517858 ] - [ DEBUG ] Creating a new SqlSession
+2020-01-28 22:34:32 [ http-nio-8080-exec-10:2517859 ] - [ DEBUG ] SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@637558ef] was not registered for synchronization because synchronization is not active
+2020-01-28 22:34:32 [ http-nio-8080-exec-10:2517860 ] - [ DEBUG ] JDBC Connection [HikariProxyConnection@1840429809 wrapping com.mysql.jdbc.JDBC4Connection@626c89b2] will not be managed by Spring
+2020-01-28 22:34:32 [ http-nio-8080-exec-10:2517860 ] - [ DEBUG ] ==>  Preparing: select `id`, USER_NAME, LOGIN_NAME, LOGIN_PWD, AGE, SEX, `IDENTITY`, CREATE_TIME, USER_LOCK, ID_CARD, ADDR, QQ, WECHAT from om_user WHERE LOGIN_NAME = ? 
+2020-01-28 22:34:32 [ http-nio-8080-exec-10:2517861 ] - [ DEBUG ] ==> Parameters: admin(String)
+2020-01-28 22:34:32 [ http-nio-8080-exec-10:2517862 ] - [ DEBUG ] <==      Total: 1
+2020-01-28 22:34:32 [ http-nio-8080-exec-10:2517863 ] - [ DEBUG ] Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@637558ef]
+2020-01-28 22:34:34 [ http-nio-8080-exec-1:2519649 ] - [ DEBUG ] ***用户验证登录***
+2020-01-28 22:34:34 [ http-nio-8080-exec-1:2519649 ] - [ DEBUG ] Creating a new SqlSession
+2020-01-28 22:34:34 [ http-nio-8080-exec-1:2519649 ] - [ DEBUG ] SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@50097d6f] was not registered for synchronization because synchronization is not active
+2020-01-28 22:34:34 [ http-nio-8080-exec-1:2519650 ] - [ DEBUG ] JDBC Connection [HikariProxyConnection@1160374588 wrapping com.mysql.jdbc.JDBC4Connection@626c89b2] will not be managed by Spring
+2020-01-28 22:34:34 [ http-nio-8080-exec-1:2519651 ] - [ DEBUG ] ==>  Preparing: select `id`, USER_NAME, LOGIN_NAME, LOGIN_PWD, AGE, SEX, `IDENTITY`, CREATE_TIME, USER_LOCK, ID_CARD, ADDR, QQ, WECHAT from om_user WHERE LOGIN_NAME = ? 
+2020-01-28 22:34:34 [ http-nio-8080-exec-1:2519651 ] - [ DEBUG ] ==> Parameters: admin(String)
+2020-01-28 22:34:34 [ http-nio-8080-exec-1:2519653 ] - [ DEBUG ] <==      Total: 1
+2020-01-28 22:34:34 [ http-nio-8080-exec-1:2519653 ] - [ DEBUG ] Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@50097d6f]
+2020-01-28 22:41:17 [ http-nio-8080-exec-9:2923041 ] - [ DEBUG ] ***用户验证登录***
+2020-01-28 22:41:17 [ http-nio-8080-exec-9:2923042 ] - [ DEBUG ] Creating a new SqlSession
+2020-01-28 22:41:17 [ http-nio-8080-exec-9:2923042 ] - [ DEBUG ] SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6cf9c10a] was not registered for synchronization because synchronization is not active
+2020-01-28 22:41:17 [ http-nio-8080-exec-9:2923043 ] - [ DEBUG ] JDBC Connection [HikariProxyConnection@632142673 wrapping com.mysql.jdbc.JDBC4Connection@3d9093bd] will not be managed by Spring
+2020-01-28 22:41:17 [ http-nio-8080-exec-9:2923044 ] - [ DEBUG ] ==>  Preparing: select `id`, USER_NAME, LOGIN_NAME, LOGIN_PWD, AGE, SEX, `IDENTITY`, CREATE_TIME, USER_LOCK, ID_CARD, ADDR, QQ, WECHAT from om_user WHERE LOGIN_NAME = ? 
+2020-01-28 22:41:17 [ http-nio-8080-exec-9:2923045 ] - [ DEBUG ] ==> Parameters: admin(String)
+2020-01-28 22:41:17 [ http-nio-8080-exec-9:2923047 ] - [ DEBUG ] <==      Total: 1
+2020-01-28 22:41:17 [ http-nio-8080-exec-9:2923048 ] - [ DEBUG ] Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6cf9c10a]
+2020-01-28 22:47:40 [ http-nio-8080-exec-8:3306131 ] - [ DEBUG ] ***用户验证登录***
+2020-01-28 22:47:40 [ http-nio-8080-exec-8:3306132 ] - [ DEBUG ] Creating a new SqlSession
+2020-01-28 22:47:40 [ http-nio-8080-exec-8:3306132 ] - [ DEBUG ] SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@46d13b8b] was not registered for synchronization because synchronization is not active
+2020-01-28 22:47:40 [ http-nio-8080-exec-8:3306133 ] - [ DEBUG ] JDBC Connection [HikariProxyConnection@1669555806 wrapping com.mysql.jdbc.JDBC4Connection@17995c91] will not be managed by Spring
+2020-01-28 22:47:40 [ http-nio-8080-exec-8:3306135 ] - [ DEBUG ] ==>  Preparing: select `id`, USER_NAME, LOGIN_NAME, LOGIN_PWD, AGE, SEX, `IDENTITY`, CREATE_TIME, USER_LOCK, ID_CARD, ADDR, QQ, WECHAT from om_user WHERE LOGIN_NAME = ? 
+2020-01-28 22:47:40 [ http-nio-8080-exec-8:3306135 ] - [ DEBUG ] ==> Parameters: admin(String)
+2020-01-28 22:47:40 [ http-nio-8080-exec-8:3306137 ] - [ DEBUG ] <==      Total: 1
+2020-01-28 22:47:40 [ http-nio-8080-exec-8:3306137 ] - [ DEBUG ] Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@46d13b8b]
+2020-01-28 22:55:16 [ http-nio-8080-exec-1:3762114 ] - [ DEBUG ] ***用户验证登录***
+2020-01-28 22:55:16 [ http-nio-8080-exec-1:3762115 ] - [ DEBUG ] Creating a new SqlSession
+2020-01-28 22:55:16 [ http-nio-8080-exec-1:3762115 ] - [ DEBUG ] SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6e7554f2] was not registered for synchronization because synchronization is not active
+2020-01-28 22:55:16 [ http-nio-8080-exec-1:3762119 ] - [ DEBUG ] JDBC Connection [HikariProxyConnection@227105047 wrapping com.mysql.jdbc.JDBC4Connection@626c89b2] will not be managed by Spring
+2020-01-28 22:55:16 [ http-nio-8080-exec-1:3762120 ] - [ DEBUG ] ==>  Preparing: select `id`, USER_NAME, LOGIN_NAME, LOGIN_PWD, AGE, SEX, `IDENTITY`, CREATE_TIME, USER_LOCK, ID_CARD, ADDR, QQ, WECHAT from om_user WHERE LOGIN_NAME = ? 
+2020-01-28 22:55:16 [ http-nio-8080-exec-1:3762121 ] - [ DEBUG ] ==> Parameters: admin(String)
+2020-01-28 22:55:16 [ http-nio-8080-exec-1:3762126 ] - [ DEBUG ] <==      Total: 1
+2020-01-28 22:55:16 [ http-nio-8080-exec-1:3762128 ] - [ DEBUG ] Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6e7554f2]
+2020-01-28 23:56:45 [ http-nio-8080-exec-2:7451399 ] - [ DEBUG ] ***用户验证登录***
+2020-01-28 23:56:45 [ http-nio-8080-exec-2:7451400 ] - [ DEBUG ] Creating a new SqlSession
+2020-01-28 23:56:45 [ http-nio-8080-exec-2:7451400 ] - [ DEBUG ] SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7a8f82c7] was not registered for synchronization because synchronization is not active
+2020-01-28 23:56:45 [ http-nio-8080-exec-2:7451402 ] - [ DEBUG ] JDBC Connection [HikariProxyConnection@1950901222 wrapping com.mysql.jdbc.JDBC4Connection@7077e9b7] will not be managed by Spring
+2020-01-28 23:56:45 [ http-nio-8080-exec-2:7451403 ] - [ DEBUG ] ==>  Preparing: select `id`, USER_NAME, LOGIN_NAME, LOGIN_PWD, AGE, SEX, `IDENTITY`, CREATE_TIME, USER_LOCK, ID_CARD, ADDR, QQ, WECHAT from om_user WHERE LOGIN_NAME = ? 
+2020-01-28 23:56:45 [ http-nio-8080-exec-2:7451404 ] - [ DEBUG ] ==> Parameters: admin(String)
+2020-01-28 23:56:45 [ http-nio-8080-exec-2:7451465 ] - [ DEBUG ] <==      Total: 1
+2020-01-28 23:56:45 [ http-nio-8080-exec-2:7451466 ] - [ DEBUG ] Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7a8f82c7]
